@@ -27,8 +27,7 @@ class Linear_np:
 
         self.x = x
         ####################### edit here ###################
-        self.out=None
-        
+        self.out= np.matmul(self.x, self.W) + self.b
         
         #####################################################
 

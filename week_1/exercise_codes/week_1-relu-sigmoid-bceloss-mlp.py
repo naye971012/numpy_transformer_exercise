@@ -169,10 +169,9 @@ def test_linear(prompt, torch_fun, numpy_fun):
     print("===============================\n")
 
 if __name__=="__main__":
-    #test_activation_functions("Relu" , torch_fun=Relu_th() , numpy_fun=Relu_np())
-    #test_activation_functions("Sigmoid" , torch_fun=Sigmoid_th() , numpy_fun=Sigmoid_np())
+    test_activation_functions("Relu" , torch_fun=Relu_th() , numpy_fun=Relu_np())
+    test_activation_functions("Sigmoid" , torch_fun=Sigmoid_th() , numpy_fun=Sigmoid_np())
     
-    #test_loss_functions("Binary Cross Entropy", torch_fun=Binary_Cross_Entropy_th(), numpy_fun=Binary_Cross_Entropy_np() , is_prob=True )
+    test_loss_functions("Binary Cross Entropy", torch_fun=Binary_Cross_Entropy_th(), numpy_fun=Binary_Cross_Entropy_np() , is_prob=True )
     
-    #test_linear("Single Linear", torch_fun=Linear_th(100,10) , numpy_fun=Linear_np(100,10) )
-    pass
+    test_linear("Single Linear", torch_fun=Linear_th(100,10) , numpy_fun=Linear_np(100,10) )

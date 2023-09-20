@@ -20,8 +20,7 @@ class Binary_Cross_Entropy_np():
         """
 
         ####################### edit here ###################
-        output=None
-        
+        output= -1 * np.mean(  target * np.log(pred + self.eps ) + (1-target) * np.log( 1 - pred + self.eps )  )
         
         #####################################################
         
@@ -38,8 +37,7 @@ class Binary_Cross_Entropy_np():
 
         #divide grad by [# of class] since we apply np.mean in forward
         ####################### edit here ###################
-        grad = None
-        
+        grad = (self.pred - self.target) / (self.pred * (1-self.pred) + self.eps) / self.target.shape[-1]
         
         #####################################################
         
