@@ -27,8 +27,9 @@ class Linear_np:
 
         self.x = x
         ####################### edit here ###################
-        self.out= np.matmul(self.x, self.W) + self.b
-        
+    
+    
+        return
         #####################################################
 
         return self.out
@@ -59,9 +60,11 @@ class Linear_np:
         # W * d_prev = (D,H) * (N,H) -> (D,N)
         # (D,N).T = (N,D)
         
-        self.dW = self.x.T.dot(d_prev) 
-        self.db = np.sum(d_prev, axis=0)
-        self.grad = np.matmul(self.W, d_prev.T).T
+        ####################### edit here ###################
+    
+    
+        return
+        #####################################################
         
         return self.grad
 

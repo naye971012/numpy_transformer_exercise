@@ -18,9 +18,8 @@ class Relu_np():
         """
         ####################### edit here ###################
         
-        self.d_zeros = x < 0
-        x[self.d_zeros] = 0
         
+        return
         #####################################################
         self.output=x
         return x
@@ -32,10 +31,9 @@ class Relu_np():
         
         """
         ####################### edit here ###################
-        
-        output = np.ones_like(d_prev)
-        output[self.d_zeros]=0
-        
+    
+    
+        return
         #####################################################
         self.grad = output
         return self.grad

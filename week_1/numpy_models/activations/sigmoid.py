@@ -15,8 +15,9 @@ class Sigmoid_np():
             np.array: [batch, ... ] 
         """
         ####################### edit here ###################
-        out= 1 / ( 1 + np.exp(-x) )
-        
+    
+    
+        return
         #####################################################
         
         self.output = out
@@ -30,8 +31,9 @@ class Sigmoid_np():
         """
     
         ####################### edit here ###################
-        grad= self.output * (1 - self.output )
+    
         
+        return
         #####################################################
         
         self.grad = grad
