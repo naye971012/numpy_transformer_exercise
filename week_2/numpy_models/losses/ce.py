@@ -19,14 +19,12 @@ class Cross_Entropy_np():
         Returns:
             Tensor: Scaler 
         """
-        batch_size, num_class = pred.shape[0], pred.shape[1]
-        target_one_hot = np.zeros((batch_size, num_class))
-        target_one_hot[np.arange(batch_size), target] = 1
+        ############################### edit here ###########################
         
-        output = -1 * (target_one_hot * np.log( pred + self.eps) )
         
-        self.pred = pred
-        self.target = target_one_hot
+        output=None
+        #####################################################################
+        
         return np.mean(output, axis=None)
     
     def backward(self, d_prev=1):
@@ -37,9 +35,11 @@ class Cross_Entropy_np():
         """
 
         #divide grad by [# of class] since we apply np.mean in forward
-        grad = (self.pred - self.target) / ( (self.pred ) * (1 - self.pred ) + self.eps ) / self.target.shape[-1]
+        ############################### edit here ###########################
         
-        self.grad = grad
+        
+        grad=None
+        #####################################################################
         return self.grad
     
     def __call__(self, pred, target):
